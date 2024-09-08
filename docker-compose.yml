@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./contacts-backend
+      dockerfile: Dockerfile
+    container_name: contacts_backend
+    ports:
+      - "9090:9090"
+
+  frontend:
+    build:
+      context: ./contacts-frontend
+      dockerfile: Dockerfile
+    container_name: contacts_frontend
+    ports:
+      - "3000:80"
