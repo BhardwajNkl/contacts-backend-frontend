@@ -1,17 +1,16 @@
-version: '3'
 services:
   backend:
     build:
-      context: ./contacts-backend
+      context: ./contacts-backend # Backend build context. Backend source code and Dockerfile are present in this directory.
       dockerfile: Dockerfile
     container_name: contacts_backend
     ports:
-      - "9090:9090"
+      - "9090:9090" # mapping port 9090 on host to container's port 9090.
 
   frontend:
     build:
-      context: ./contacts-frontend
+      context: ./contacts-frontend # Frontend build context. Frontend source code and Dockerfile are present in this directory.
       dockerfile: Dockerfile
     container_name: contacts_frontend
     ports:
-      - "3000:80"
+      - "3000:80"  # mapping port 3000 on host to container's port 80.
