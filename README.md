@@ -43,7 +43,6 @@ Open a browser and go to http://localhost:3000 . This will load the Contacts app
 To get API documentation: Visit http://localhost:9090/swagger-ui/index.html .
 
 ### Step 4: Stopping the Application
-**NOTE:** The below command will only remove the containers and not the volume. This means you can again launch the app and get the previously stored data. If you want to remove the associated docker volume too, then just add: **--volume** at in the end of the below comand.
 ```bash
 docker-compose down
 ```
